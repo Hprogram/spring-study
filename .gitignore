@@ -20,3 +20,5 @@ out/
 *.iml
 out
 gen
+.gradle
+build
