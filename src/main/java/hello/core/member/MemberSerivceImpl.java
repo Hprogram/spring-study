@@ -1,8 +1,12 @@
 package hello.core.member;
 
-public class MemberSerivceImpl implements  MemberService{
+public class MemberSerivceImpl implements MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberSerivceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
